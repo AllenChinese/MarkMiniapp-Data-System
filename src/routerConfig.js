@@ -5,6 +5,7 @@
 import HeaderAsideLayout from './layouts/HeaderAsideLayout';
 import Dashboard from './pages/Dashboard';
 import Monitor from './pages/Monitor';
+import Workplace from './pages/Workplace';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -26,7 +27,7 @@ const routerConfig = [
       {
         path: '/dashboard/workplace',
         layout: HeaderAsideLayout,
-        component: NotFound,
+        component: Workplace,
       },
     ],
   },
@@ -119,6 +120,11 @@ const routerConfig = [
         component: NotFound,
       },
     ],
+  },
+  {
+    path: '/workplace',
+    layout: HeaderAsideLayout,
+    component: Workplace,
   },
   {
     path: '*',
