@@ -5,5 +5,5 @@ module.exports = {
       extensions: ['.js', '.json', '.vue'],
     },
   },
-  baseUrl: '/icevue'
+  baseUrl: '/dist/icevue'
 };
