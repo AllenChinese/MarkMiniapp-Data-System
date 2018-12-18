@@ -122,11 +122,6 @@ const routerConfig = [
     ],
   },
   {
-    path: '/workplace',
-    layout: HeaderAsideLayout,
-    component: Workplace,
-  },
-  {
     path: '*',
     layout: HeaderAsideLayout,
     component: NotFound,
