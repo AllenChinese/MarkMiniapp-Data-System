@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@vue-materials/basic-container": "^1.0.0",
+    "axios": "^0.18.0",
     "echarts": "^4.1.0",
     "element-ui": "^2.3.6",
     "normalize.css": "^8.0.1",
