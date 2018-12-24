@@ -3,29 +3,33 @@
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 
 import HeaderAsideLayout from './layouts/HeaderAsideLayout';
-import Dashboard from './pages/Dashboard';
+// 小程序
+import MiniApp from './pages/MiniApp';
 import Monitor from './pages/Monitor';
 import Workplace from './pages/Workplace';
+// 活动数据
+import Basic from './pages/Basic';
+// 404
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
   {
     path: '/',
     layout: HeaderAsideLayout,
-    component: Dashboard,
+    component: MiniApp,
     children: [
       {
-        path: '/dashboard/analysis',
+        path: '/miniapp/analysis',
         layout: HeaderAsideLayout,
-        component: Dashboard,
+        component: MiniApp,
       },
       {
-        path: '/dashboard/monitor',
+        path: '/miniapp/monitor',
         layout: HeaderAsideLayout,
         component: Monitor,
       },
       {
-        path: '/dashboard/workplace',
+        path: '/miniapp/workplace',
         layout: HeaderAsideLayout,
         component: Workplace,
       },
@@ -34,15 +38,15 @@ const routerConfig = [
   {
     path: '/table',
     layout: HeaderAsideLayout,
-    component: NotFound,
+    component: Basic,
     children: [
       {
         path: '/table/basic',
         layout: HeaderAsideLayout,
-        component: NotFound,
+        component: Basic,
       },
       {
-        path: '/table/fixed',
+        path: '/table/warting',
         layout: HeaderAsideLayout,
         component: NotFound,
       },

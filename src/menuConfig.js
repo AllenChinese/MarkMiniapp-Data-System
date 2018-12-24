@@ -6,17 +6,17 @@ const headerMenuConfig = [];
 
 const asideMenuConfig = [
   {
-    path: '/dashboard',
-    name: 'Dashboard',
+    path: '/miniapp',
+    name: '小程序',
     icon: 'el-icon-menu',
     children: [
       {
-        path: '/analysis',
-        name: '分析页',
-      },
-      {
         path: '/monitor',
         name: '监控页',
+      },
+      {
+        path: '/analysis',
+        name: '分析页',
       },
       {
         path: '/workplace',
@@ -26,16 +26,16 @@ const asideMenuConfig = [
   },
   {
     path: '/table',
-    name: '表格页',
+    name: '活动数据',
     icon: 'el-icon-date',
     children: [
       {
         path: '/basic',
-        name: '基础表格',
+        name: '在线活动',
       },
       {
-        path: '/fixed',
-        name: '固定表格',
+        path: '/warting',
+        name: '待上新活动',
       },
     ],
   },
