@@ -93,7 +93,7 @@ export default {
 
   data() {
     return {
-      backgroundImage: backgroundImage,
+      backgroundImage: require('../../../../assets/bg_2.png'),
       isLoading: false,
       user: {
         username: '',
