@@ -17,7 +17,7 @@ const asideMenuConfig = [
       {
         path: '/analysis',
         name: '分析页',
-      }
+      },
     ],
   },
   {
@@ -36,14 +36,14 @@ const asideMenuConfig = [
     ],
   },
   {
-    path: '/form',
+    path: '/account',
     name: '账户管理',
     icon: 'el-icon-edit-outline',
     children: [
       {
         path: '/basic',
         name: '账户管理',
-      }
+      },
     ],
   }
 ];

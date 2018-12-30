@@ -8,8 +8,14 @@ import MiniApp from './pages/MiniApp';
 import Monitor from './pages/Monitor';
 import Workplace from './pages/Workplace';
 // 活动数据
+// 在线活动
 import Basic from './pages/Basic';
+// 待上新活动
+// import Warting from './pages/Warting';
+// 账户管理
+// import Account from './pages/Account';
 // 404
+import Account from './pages/Account';
 import NotFound from './pages/NotFound';
 
 const routerConfig = [
@@ -27,7 +33,7 @@ const routerConfig = [
         path: '/miniapp/monitor',
         layout: HeaderAsideLayout,
         component: Monitor,
-      }
+      },
     ],
   },
   {
@@ -43,21 +49,26 @@ const routerConfig = [
       {
         path: '/table/warting',
         layout: HeaderAsideLayout,
-        component: NotFound,
+        component: Basic,
       },
     ],
   },
   {
-    path: '/form',
+    path: '/account',
     layout: HeaderAsideLayout,
     component: NotFound,
     children: [
       {
-        path: '/form/basic',
+        path: '/account/basic',
         layout: HeaderAsideLayout,
-        component: NotFound,
-      }
+        component: Account,
+      },
     ],
+  },
+  {
+    path: '/account/basic',
+    layout: HeaderAsideLayout,
+    component: Account,
   },
   {
     path: '*',
