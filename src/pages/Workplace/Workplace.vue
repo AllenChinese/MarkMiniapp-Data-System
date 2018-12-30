@@ -1,7 +1,7 @@
 <template>
   <div className="workplace-page">
-        <BasicForm />
-      </div>
+    <BasicForm />
+  </div>
 </template>
 
 <script>
