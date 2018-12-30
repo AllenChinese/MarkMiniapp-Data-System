@@ -32,6 +32,8 @@ const recursiveRouterConfig = (config = []) => {
         {
           path: '',
           component: item.component,
+          name: item.name,
+          meta: item.meta
         },
       ],
     };

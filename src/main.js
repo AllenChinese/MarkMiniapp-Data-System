@@ -10,6 +10,23 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+// 路由拦截
+router.beforeEach((to, from, next) => {
+  console.log(to)
+  console.log(to.meta.requireAuth)
+  if (to.meta.requireAuth) { // 该路由是否需要登录
+    if (window.localStorage.isLogined === 'true') {
+      next()
+    } else {
+      next({
+        path: '/login',
+        query: { redirect: to.fullPath } // 登录成功后跳转到该路由
+      })
+    }
+  } else {
+    next()
+  }
+})
 new Vue({
   router,
   render: h => h(App),

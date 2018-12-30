@@ -46,6 +46,11 @@ const asideMenuConfig = [
       },
     ],
   }
+  // {
+  //   name: 'Login',
+  //   path: '/Login',
+  //   icon: 'home',
+  // },
 ];
 
 export { headerMenuConfig, asideMenuConfig };
