@@ -1,22 +1,27 @@
 <template>
   <div className="monitor-page">
-        <RingChart />
-        <GaugeChart />
-        <BarChart />
-      </div>
+    <DataDisplay />
+    <el-row>
+      <el-col :span="12"><PieChart /></el-col>
+      <el-col :span="12"><RadarChart /></el-col>
+    </el-row>
+    <HistogramChart />
+  </div>
 </template>
 
 <script>
-import RingChart from './components/RingChart';
-import GaugeChart from './components/GaugeChart';
-import BarChart from './components/BarChart';
+import DataDisplay from './components/DataDisplay'
+import HistogramChart from './components/HistogramChart'
+import PieChart from './components/PieChart'
+import RadarChart from './components/RadarChart'
 
 export default {
   name: 'Monitor',
   components: {
-    RingChart,
-    GaugeChart,
-    BarChart,
+    DataDisplay,
+    HistogramChart,
+    PieChart,
+    RadarChart
   },
 };
 </script>
