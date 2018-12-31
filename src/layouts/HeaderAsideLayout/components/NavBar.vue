@@ -22,7 +22,7 @@
             <img
               class="user-avatar"
               src="https://img.alicdn.com/tfs/TB1ONhloamWBuNjy1XaXXXCbXXa-200-200.png">
-            <span class="user-name">淘小宝</span>
+            <span class="user-name">周嘉炜</span>
           </div>
           <el-dropdown-menu
             slot="dropdown"
@@ -55,7 +55,10 @@ export default {
   name: 'NavBar',
   methods: {
     logout() {
-      console.log('Logout');
+      // 清除本地 token
+      window.localStorage.removeItem('isLogined')
+      // 跳转到登录页
+      this.$router.push({path: '/login'})
     },
   },
 };
