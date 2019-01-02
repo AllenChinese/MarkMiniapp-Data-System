@@ -6,34 +6,18 @@ import axios from './api'
  */
 
 // 单独倒出
-export const query = params => {
+export const getToken = params => {
   return axios({
-    url: '/query',
-    method: 'get',
-    params
-  })
-}
-
-export const mock = params => {
-  return axios({
-    url: '/mock',
-    method: 'get',
-    params
-  })
-}
-
-export const upload = data => {
-  return axios({
-    url: '/upload',
+    url: '/getToken',
     method: 'post',
-    data
+    params
   })
 }
+
+
 
 // 默认全部倒出
 // 根绝需要进行
 export default {
-  query,
-  mock,
-  upload
+  getToken
 }

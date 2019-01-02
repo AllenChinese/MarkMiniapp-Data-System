@@ -12,8 +12,9 @@ Vue.config.productionTip = false;
 
 // 路由拦截
 router.beforeEach((to, from, next) => {
-  console.log(to)
-  console.log(to.meta.requireAuth)
+  // token 是否过期验证
+  // console.log(to)
+  // console.log(to.meta.requireAuth)
   if (to.meta.requireAuth) { // 该路由是否需要登录
     if (window.localStorage.isLogined === 'true') {
       next()

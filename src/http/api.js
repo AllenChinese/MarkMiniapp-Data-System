@@ -16,11 +16,11 @@ export default function $axios(options) {
         // Tip: 1 请求开启全屏 loading
         // Tip: 2
         // 带上 token , 可以结合 vuex 或者重 localStorage
-        if (store.getters.token) {
-          config.headers['X-Token'] = getToken()
-        } else {
-          // 重定向到登录页面
-        }
+        // if (store.getters.token) {
+        //   config.headers['X-Token'] = getToken()
+        // } else {
+        //   // 重定向到登录页面
+        // }
         // Tip: 3
         // 根据请求方法，序列化传来的参数，根据后端需求是否序列化
         if (config.method.toLocaleLowerCase() === 'get'
@@ -57,6 +57,7 @@ export default function $axios(options) {
       response => {
         let data
         //  IE9 时 response.data 是 undefined
+
         if (response.data === undefined) {
           data = response.request.responseText
         } else {
@@ -64,24 +65,26 @@ export default function $axios(options) {
         }
 
         // 根据返回的 code 值来做不同的处理
-        switch (data.code) {
-          case '':
-            break;
-          default:
-        }
+        // switch (data.code) {
+        //   case '':
+        //     break;
+        //   default:
+        // }
 
         // 若不是正确的返回 code，且已经登录，就抛出错误
-        // const err = new Error(data.description)
-        // err.data = data
-        // err.response = response
-        // throw err
+        // if (response.code !== 0) {
+        //   let err = new Error(response.code)
+        //   err.data = response.data
+        //   err.response = response
+        //   throw err
+        // }
 
-        return data
+        return JSON.parse(data)
       },
 
       err => {
         if (err && err.response) {
-          switch (err.response.status) {
+          switch (err.response.data.code) {
             case 400:
               err.message = '请求错误'
               break

@@ -85,6 +85,7 @@
 
 <script>
 import BasicContainer from '@vue-materials/basic-container';
+import { getToken } from '@/http/inderface';
 const backgroundImage =
   'https://img.alicdn.com/tfs/TB1zsNhXTtYBeNjy1XdXXXXyVXa-2252-1500.png';
 export default {
@@ -105,15 +106,20 @@ export default {
   created() {},
 
   methods: {
-    submitBtn() {
-      this.$refs['form'].validate((valid) => {
+     submitBtn() {
+      this.$refs['form'].validate(async (valid) => {
         if (valid) {
           this.isLoading = true
           window.localStorage.isLogined = true
-          setTimeout(() => {
-            this.isLoading = false
-          }, 3000)
-          this.$router.push({path: '/'}) // 一定要写？
+
+          let getTokenResult = await getToken(this.user)
+          console.log(getTokenResult)
+          if (getTokenResult.code === 0) {
+            setTimeout(() => {
+              this.isLoading = false
+              this.$router.push({path: '/'}) // 一定要写？
+            }, 2000)
+          }
         }
       });
     },
