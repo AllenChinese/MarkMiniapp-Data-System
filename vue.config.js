@@ -5,5 +5,5 @@ module.exports = {
       extensions: ['.js', '.json', '.vue'],
     },
   },
-  baseUrl: '/icevue/dist'
+  baseUrl: '/MarkMiniapp-Data-System/dist'
 };
