@@ -40,7 +40,8 @@
     "less-loader": "^4.1.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^6.0.6",
-    "vue-template-compiler": "^2.5.13"
+    "vue-template-compiler": "^2.5.13",
+    "tar": ">=4.4.2"
   },
   "repository": {
     "type": "git",
